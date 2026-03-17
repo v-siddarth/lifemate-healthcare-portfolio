@@ -1,13 +1,4 @@
-const imgPlaceholder = 'https://www.figma.com/api/mcp/asset/4b5a129d-9e95-496e-a7bc-2033bfb01da8';
-const imgVector = 'https://www.figma.com/api/mcp/asset/188fe9a6-eeea-446b-ac3f-e4d8eb67104e';
-const imgVector1 = 'https://www.figma.com/api/mcp/asset/21321f50-e910-420c-90bf-8e7838de7428';
-const imgVector2 = 'https://www.figma.com/api/mcp/asset/7fe79c80-044f-47f7-9d3d-0bbcf23fd0db';
-const imgVector3 = 'https://www.figma.com/api/mcp/asset/627a7cfb-97a6-4b0b-962f-850c8fc5abb3';
-const imgVector4 = 'https://www.figma.com/api/mcp/asset/b5f8ae82-ea24-44c9-9c5a-164408dfa48f';
-const imgVector5 = 'https://www.figma.com/api/mcp/asset/b30171b1-431b-4265-80f1-a85cbee05151';
-const imgVector6 = 'https://www.figma.com/api/mcp/asset/59d24aa7-9cf5-4680-80ad-8bdf6a6fcea5';
-const imgVector7 = 'https://www.figma.com/api/mcp/asset/e36ebe3a-e231-4e8d-881f-36517d07f148';
-const imgVector8 = 'https://www.figma.com/api/mcp/asset/a87054ae-bc9b-4291-bd18-27e098725aff';
+import heroDoctor from '../../assets/hero-doctor.png';
 
 const FigmaHeroSection = () => {
   return (
@@ -17,41 +8,8 @@ const FigmaHeroSection = () => {
 
         <div className="pointer-events-none absolute right-0 top-0 hidden h-[700px] w-[604.15px] bg-[#0E5A8A] lg:block" />
 
-        <div className="pointer-events-none absolute right-[35px] top-[86px] hidden h-[721.15px] w-[625px] lg:block">
-          <div className="absolute inset-[20.54%_10.39%_46.93%_56.86%]">
-            <img src={imgVector} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[24.99%_15.26%_12.27%_6.66%]">
-            <img src={imgVector1} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[58.05%_61.22%_7.03%_0]">
-            <img src={imgVector2} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[23.9%_68.43%_59.86%_13.88%]">
-            <img src={imgVector3} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[59.4%_68.33%_15.78%_11.54%]">
-            <img src={imgVector4} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[26.34%_21.42%_35.58%_33.92%]">
-            <img src={imgVector5} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[51.86%_11.17%_17.28%_80.75%]">
-            <img src={imgVector6} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[23.14%_81.46%_38.76%_0.03%]">
-            <img src={imgVector7} alt="" className="h-full w-full" aria-hidden />
-          </div>
-          <div className="absolute inset-[0_0_0_1.25%] overflow-hidden">
-            <img
-              src={imgPlaceholder}
-              alt="Doctor"
-              className="h-full w-full scale-[1.045] object-cover object-center"
-            />
-          </div>
-          <div className="absolute inset-[67.62%_17.83%_12.17%_56.11%]">
-            <img src={imgVector8} alt="" className="h-full w-full" aria-hidden />
-          </div>
+        <div className="pointer-events-none absolute right-[35px] top-[60px] hidden h-[760px] w-[625px] items-start justify-center lg:flex">
+          <img src={heroDoctor} alt="Doctor" className="h-full w-full object-contain object-top" />
         </div>
       </div>
 

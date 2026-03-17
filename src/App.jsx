@@ -4,6 +4,7 @@ import FigmaActivitySection from './components/sections/FigmaActivitySection';
 import FigmaFooterSection from './components/sections/FigmaFooterSection';
 import FigmaHeroSection from './components/sections/FigmaHeroSection';
 import FigmaNewsletterSection from './components/sections/FigmaNewsletterSection';
+import FigmaQualitySection from './components/sections/FigmaQualitySection';
 import FigmaTestimonialsSection from './components/sections/FigmaTestimonialsSection';
 import DirectorsSection from './components/sections/DirectorsSection';
 import HeroCardsSection from './components/sections/HeroCardsSection';
@@ -44,6 +45,7 @@ function App() {
         <HeroCardsSection />
         <FigmaActivitySection />
         <DirectorsSection />
+        <FigmaQualitySection />
         <FigmaTestimonialsSection />
         <FigmaNewsletterSection />
         <FigmaFooterSection />

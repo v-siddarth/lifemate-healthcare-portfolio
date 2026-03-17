@@ -38,30 +38,32 @@ const Navbar = () => {
             <img
               src={logo}
               alt="LifeMate Healthcare logo"
-              className="h-8 w-auto object-contain sm:h-10 lg:h-14 xl:h-16"
+              className="h-5 w-auto object-contain sm:h-6 lg:h-8 xl:h-9"
             />
             <span className="flex flex-col leading-none">
-              <span className="text-[16px] font-extrabold tracking-[0.2px] text-[#0E5A8A] sm:text-[24px] lg:text-[26px]">
+              <span className="text-[12px] font-extrabold tracking-[0.2px] text-[#0E5A8A] sm:text-[18px] lg:text-[20px]">
                 LifeMate Healthcare
-                <sup className="ml-1 align-super text-[10px] font-bold text-[#0E5A8A]/70 sm:text-[12px]">TM</sup>
+                <sup className="ml-1 align-super text-[7px] font-bold text-[#0E5A8A]/70 sm:text-[9px]">TM</sup>
               </span>
-              <span className="mt-1 hidden text-[12px] font-semibold uppercase tracking-[1.8px] text-[#0E5A8A] sm:block">
+              <span className="mt-1 hidden text-[9px] font-semibold uppercase tracking-[1.4px] text-[#0E5A8A] sm:block">
                 Pvt Ltd
               </span>
             </span>
           </Link>
 
-          <nav className="ml-2 hidden items-center gap-7 xl:ml-6 xl:gap-8 lg:flex" aria-label="Primary">
-            {mainNavItems.map((item) => (
-              <a
-                key={item.path}
-                href={item.path}
-                className="text-[15px] font-bold leading-6 tracking-[0.2px] text-[#475569] transition-colors duration-200 hover:text-[#0F172A]"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          <div className="ml-2 hidden rounded-full border border-transparent bg-transparent px-5 py-2 shadow-none backdrop-blur-0 transition-all duration-200 hover:border-white/40 hover:bg-white/55 hover:shadow-[0_10px_30px_rgba(14,90,138,0.15)] hover:backdrop-blur-lg lg:flex xl:ml-6">
+            <nav className="flex items-center gap-7 xl:gap-8" aria-label="Primary">
+              {mainNavItems.map((item) => (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  className="text-[15px] font-bold leading-6 tracking-[0.2px] text-[#475569] transition-colors duration-200 hover:text-[#0F172A]"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
 
         <div className="hidden items-center lg:flex">
