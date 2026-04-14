@@ -20,7 +20,7 @@ const cards = [
   {
     title: 'LifeMate Clinic',
     description:
-      'Consultation-led outpatient and preventive care model supporting early diagnosis, follow-ups, and long-term health outcomes.',
+      'A modern consultation-led outpatient and preventive care approach ensuring early diagnosis, proactive follow-ups, and stronger long-term health outcomes.',
     iconBg: '#334155',
     icon: '❤',
     location: 'Pune',
