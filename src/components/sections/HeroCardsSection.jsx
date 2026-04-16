@@ -6,7 +6,7 @@ const cards = [
     iconBg: '#1D9BF0',
     icon: '⚕',
     location: 'Narayangaon, Pune District',
-    href: '#',
+    href: 'https://dr-hospital-website.vercel.app/',
   },
   {
     title: 'Dr. Mate Hospital, Belhe',
@@ -15,7 +15,7 @@ const cards = [
     iconBg: '#14C94A',
     icon: '✚',
     location: 'Belhe, Pune District',
-    href: '#',
+    href: 'https://dr-hospital-website.vercel.app/',
   },
   {
     title: 'LifeMate Clinic',
@@ -24,14 +24,14 @@ const cards = [
     iconBg: '#334155',
     icon: '❤',
     location: 'Pune',
-    href: '#',
+    href: 'https://lifemate-clinic-bmxk.vercel.app/',
   },
 ];
 
 const HeroCardsSection = () => {
   return (
     <section id="hospitals" className="relative z-30 bg-[#F7FBFD]" aria-label="Healthcare service highlights">
-      <div className="mx-auto -mt-6 w-[min(1120px,95vw)] pb-[74px] sm:-mt-16 lg:-mt-44">
+      <div className="mx-auto mt-4 w-[min(1120px,95vw)] pb-[74px] sm:mt-8 lg:-mt-24">
         <div className="grid gap-[24px] md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
             <a

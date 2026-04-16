@@ -1,24 +1,33 @@
-const directors = [
+const doctors = [
+  {
+    name: 'Dr. D. B. Mate',
+    designation: 'Founding Visionary',
+    summary:
+      'Established the original healthcare foundation with a deep commitment to rural service, ethical treatment, and affordable access for underserved communities across Pune.',
+  },
+  {
+    name: 'Dr. Ajay D. Mate',
+    designation: 'Leadership and Operations',
+    summary:
+      'Strengthens institutional discipline, service reliability, and coordinated hospital performance while supporting steady expansion across LifeMate Healthcare units.',
+  },
   {
     name: 'Dr. Swapnil D. Mate',
-    designation: 'Director',
-    area: 'Clinical Leadership',
+    designation: 'Clinical Direction and Growth',
     summary:
-      'Leads medical quality direction, patient-centered care standards, and long-term healthcare growth strategy.',
+      'Leads medical quality standards, patient-first systems, and future-facing healthcare growth with a strong emphasis on outcomes, safety, and clinical excellence.',
   },
   {
-    name: 'Ajay D. Mate',
-    designation: 'Director',
-    area: 'Operations and Governance',
+    name: 'Dr. Rucha A. Mate',
+    designation: 'Patient Care and Clinical Excellence',
     summary:
-      'Oversees operational discipline, service reliability, and governance frameworks across LifeMate Healthcare units.',
+      'Supports compassionate care delivery, stronger patient experience, and evolving clinical practices that align modern treatment pathways with ethical service values.',
   },
   {
-    name: 'Leadership Office',
-    designation: 'Director - Clinical Operations',
-    area: 'Strategy and Innovation',
+    name: 'Dr. Kshama S. Mate',
+    designation: 'Healthcare Quality and Community Impact',
     summary:
-      'Drives roadmap initiatives including healthcare expansion, digital systems, and CarrerMed platform development.',
+      'Advances quality-focused care, professional coordination, and meaningful community health impact by helping align service excellence with accessible treatment.',
   },
 ];
 
@@ -29,42 +38,45 @@ const DirectorsSection = () => {
       className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7fbfd_100%)]"
       aria-label="LifeMate Healthcare directors and leadership team"
     >
-      <div className="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full bg-[#1D9BF0]/10 blur-3xl" />
-      <div className="pointer-events-none absolute -left-16 bottom-8 h-52 w-52 rounded-full bg-[#14C94A]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-[#1D9BF0]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-[#14C94A]/10 blur-3xl" />
 
-      <div className="relative mx-auto w-[min(1120px,95vw)] pb-[44px] pt-[40px] lg:pb-[58px] lg:pt-[56px]">
+      <div className="relative mx-auto w-[min(1120px,95vw)] pb-[52px] pt-[44px] lg:pb-[70px] lg:pt-[62px]">
         <div className="max-w-[760px]">
           <p className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0]">Leadership Team</p>
-          <h2 className="mt-2 text-[40px] font-bold leading-[50px] tracking-[0.2px] text-[#0F172A] lg:text-[46px] lg:leading-[58px]">
-            Directors Driving Healthcare Excellence
+          <h2 className="mt-2 text-[38px] font-bold leading-[1.12] tracking-[0.2px] text-[#0F172A] lg:text-[50px] lg:leading-[58px]">
+            Leadership Guiding LifeMate Healthcare Forward
           </h2>
           <p className="mt-4 text-[16px] leading-8 text-[#475569]">
-            The LifeMate Healthcare Pvt Ltd directors team leads quality care delivery, hospital performance, and
-            future-focused expansion with a strong commitment to ethical, patient-first healthcare.
+            LifeMate Healthcare Pvt Ltd is led by a multi-doctor leadership team rooted in service, clinical trust,
+            operational discipline, and a long-term commitment to ethical healthcare growth across every unit.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {directors.map((director, index) => (
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {doctors.map((doctor, index) => (
             <article
-              key={`${director.name}-${director.designation}`}
-              className="group overflow-hidden rounded-3xl border border-[#D9E6EE] bg-white shadow-[0_10px_28px_rgba(14,90,138,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_40px_rgba(14,90,138,0.16)]"
+              key={doctor.name}
+              className="group relative overflow-hidden rounded-[30px] border border-[#D9E6EE] bg-white p-7 shadow-[0_12px_30px_rgba(14,90,138,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1D9BF0]/30 hover:shadow-[0_24px_46px_rgba(14,90,138,0.14)]"
             >
-              <div className="h-1.5 w-full bg-[linear-gradient(90deg,#1D9BF0_0%,#0E5A8A_58%,#14C94A_100%)]" />
-              <div className="p-7">
-                <div className="mb-5 flex items-center justify-between">
-                  <span className="inline-flex items-center rounded-full bg-[#EAF4FB] px-3 py-1 text-[11px] font-semibold uppercase tracking-[1px] text-[#0E5A8A]">
-                    {director.area}
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-[linear-gradient(90deg,#1D9BF0_0%,#0E5A8A_55%,#14C94A_100%)]" />
+              <div className="pointer-events-none absolute right-[-18px] top-[-18px] h-28 w-28 rounded-full bg-[#EAF4FB] opacity-70 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+
+              <div className="relative">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[linear-gradient(145deg,#EAF4FB_0%,#F7FBFD_100%)] text-[14px] font-extrabold text-[#0E5A8A] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
+                    0{index + 1}
+                  </div>
+                  <span className="inline-flex items-center rounded-full border border-[#D9E6EE] bg-[#F8FBFD] px-3 py-1 text-[11px] font-bold uppercase tracking-[1.1px] text-[#0E5A8A]">
+                    LifeMate Leadership
                   </span>
-                  <span className="text-[12px] font-bold text-[#1D9BF0]">0{index + 1}</span>
                 </div>
 
-                <h3 className="text-[28px] font-extrabold leading-[1.2] text-[#0F172A]">{director.name}</h3>
-                <p className="mt-2 text-[12px] font-semibold uppercase tracking-[1.4px] text-[#0E5A8A]">
-                  {director.designation}
-                </p>
-                <div className="mt-4 h-[2px] w-[56px] bg-[#14C94A]" />
-                <p className="mt-4 text-[15px] leading-7 text-[#475569]">{director.summary}</p>
+                <h3 className="mt-6 text-[30px] font-extrabold leading-[1.14] text-[#0F172A]">{doctor.name}</h3>
+                <p className="mt-3 text-[12px] font-bold uppercase tracking-[1.4px] text-[#1D9BF0]">{doctor.designation}</p>
+                <div className="mt-5 h-[3px] w-[64px] rounded-full bg-[linear-gradient(90deg,#1D9BF0_0%,#14C94A_100%)]" />
+
+                <p className="mt-5 text-[15px] leading-7 text-[#475569]">{doctor.summary}</p>
               </div>
             </article>
           ))}

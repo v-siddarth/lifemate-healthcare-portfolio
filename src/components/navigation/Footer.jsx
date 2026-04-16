@@ -46,8 +46,18 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <a href="mailto:connect@lifematehealthcare.com" className="transition hover:text-white">
-                connect@lifematehealthcare.com
+              <a href="tel:+918459612363" className="transition hover:text-white">
+                +91 84596 12363
+              </a>
+            </li>
+            <li>
+              <a href="tel:+912029972423" className="transition hover:text-white">
+                +91 20 2997 2423
+              </a>
+            </li>
+            <li>
+              <a href="mailto:lifematehealthcare@gmail.com" className="transition hover:text-white">
+                lifematehealthcare@gmail.com
               </a>
             </li>
           </ul>

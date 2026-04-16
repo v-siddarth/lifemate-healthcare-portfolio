@@ -60,10 +60,13 @@ const ContactPage = () => {
             </p>
             <div className="mt-8 space-y-4 text-sm text-slate-700">
               <p>
-                <span className="font-semibold text-slate-900">Email:</span> connect@lifematehealthcare.com
+                <span className="font-semibold text-slate-900">Clinic Mobile:</span> +91 84596 12363
               </p>
               <p>
-                <span className="font-semibold text-slate-900">Location:</span> Pune, Maharashtra, India
+                <span className="font-semibold text-slate-900">Clinic Landline:</span> +91 20 2997 2423
+              </p>
+              <p>
+                <span className="font-semibold text-slate-900">Email:</span> lifematehealthcare@gmail.com
               </p>
               <p>
                 <span className="font-semibold text-slate-900">Response Time:</span> Within 1-2 business days

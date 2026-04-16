@@ -53,10 +53,13 @@ const FigmaFooterSection = () => {
               <h3 className="text-[16px] font-bold leading-6 tracking-[0.1px] text-[#0F172A]">Get In Touch</h3>
               <ul className="mt-5 space-y-[10px]">
                 <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
-                  <span className="text-[#0E5A8A]">Phone:</span> +91 98901 56455
+                  <span className="text-[#0E5A8A]">Clinic Mobile:</span> +91 84596 12363
                 </li>
                 <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
-                  <span className="text-[#0E5A8A]">Email:</span> lifemateclinic@gmail.com
+                  <span className="text-[#0E5A8A]">Clinic Landline:</span> +91 20 2997 2423
+                </li>
+                <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+                  <span className="text-[#0E5A8A]">Email:</span> lifematehealthcare@gmail.com
                 </li>
                 <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
                   <span className="text-[#0E5A8A]">Address:</span> Near ST Bus Stand, Narayangaon, Pune, Maharashtra
