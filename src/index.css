@@ -24,11 +24,31 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-width: 320px;
   background: linear-gradient(180deg, var(--lm-bg) 0%, var(--lm-bg-soft) 100%);
   color: var(--lm-text);
   font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(29, 155, 240, 0.1) 0%, rgba(29, 155, 240, 0) 36%),
+    radial-gradient(circle at 92% 20%, rgba(14, 90, 138, 0.1) 0%, rgba(14, 90, 138, 0) 34%),
+    radial-gradient(circle at 84% 78%, rgba(20, 201, 74, 0.08) 0%, rgba(20, 201, 74, 0) 30%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.74) 0px,
+      rgba(255, 255, 255, 0.74) 560px,
+      rgba(247, 251, 253, 0.82) 560px,
+      rgba(247, 251, 253, 0.82) 1120px
+    );
 }
 
 a {

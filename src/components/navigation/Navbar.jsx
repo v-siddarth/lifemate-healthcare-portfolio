@@ -6,14 +6,14 @@ const mainNavItems = [
   { label: 'Home', path: '#home' },
   { label: 'Hospitals', path: '#hospitals' },
   { label: 'About Us', path: '#about' },
-  { label: 'Testimonials', path: '#testimonials' },
+  { label: 'Vision & Goals', path: '#vision-goals' },
 ];
 
 const mobileNavItems = [
   { label: 'Home', path: '#home' },
   { label: 'Hospitals', path: '#hospitals' },
   { label: 'About Us', path: '#about' },
-  { label: 'Testimonials', path: '#testimonials' },
+  { label: 'Vision & Goals', path: '#vision-goals' },
 ];
 
 const Navbar = () => {

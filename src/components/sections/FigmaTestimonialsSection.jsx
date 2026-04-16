@@ -69,11 +69,11 @@ const FigmaTestimonialsSection = () => {
 
               <div className="border-l-4 border-[#1D9BF0] pl-4">
                 <div className="mb-3 flex gap-[4px] text-[22px] leading-none">
-                  <span className="text-[#F59E0B]">★</span>
-                  <span className="text-[#F59E0B]">★</span>
-                  <span className="text-[#F59E0B]">★</span>
-                  <span className="text-[#F59E0B]">★</span>
-                  <span className="text-[#F59E0B]">★</span>
+                  <span className="text-yellow-400">★</span>
+                  <span className="text-yellow-400">★</span>
+                  <span className="text-yellow-400">★</span>
+                  <span className="text-yellow-400">★</span>
+                  <span className="text-yellow-400">★</span>
                 </div>
                 <p className="text-gray-500 leading-relaxed">"{item.quote}"</p>
               </div>

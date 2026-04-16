@@ -21,7 +21,7 @@ const cards = [
     title: 'LifeMate Clinic',
     description:
       'A modern consultation-led outpatient and preventive care approach ensuring early diagnosis, proactive follow-ups, and stronger long-term health outcomes.',
-    iconBg: '#334155',
+    iconBg: '#0E5A8A',
     icon: '❤',
     location: 'Pune',
     href: 'https://lifemate-clinic-bmxk.vercel.app/',
@@ -30,8 +30,8 @@ const cards = [
 
 const HeroCardsSection = () => {
   return (
-    <section id="hospitals" className="relative z-30 bg-[#F7FBFD]" aria-label="Healthcare service highlights">
-      <div className="lm-container -mt-16 pb-20 md:-mt-20 md:pb-24">
+    <section id="hospitals" className="relative z-30 bg-[linear-gradient(180deg,#FFFFFF_0%,#F8FCFF_100%)]" aria-label="Healthcare service highlights">
+      <div className="lm-container mt-8 pb-20 md:-mt-20 md:pb-24">
         <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {cards.map((card) => (
             <a

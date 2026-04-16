@@ -1,9 +1,9 @@
 import activityDoctor from '../../assets/activity-doctor.jpg';
 
 const storyParagraphs = [
-  'LifeMate Healthcare Pvt Ltd is built on a legacy of compassion, trust, and a mission to deliver accessible, affordable, and quality healthcare.',
-  'Over 50 years ago, Dr. D. B. Mate chose to serve rural communities after his tenure at Sassoon Hospital, establishing a multispeciality hospital that brought life-saving care to underserved villages across Pune.',
-  'Continuing this vision, the next generation expanded healthcare access by introducing advanced technologies, modern infrastructure, and specialized treatments in rural areas. With the launch of a super speciality hospital in 2015, now a 100+ bed facility, LifeMate has grown into a trusted healthcare network. Today, with the addition of LifeMate Clinic in Pune city, the organization continues to bridge the gap between rural and urban healthcare, delivering ethical, patient-first care that has transformed thousands of lives.',
+  'LifeMate Healthcare Pvt Ltd is built on a legacy of dedication, compassion, and a deep commitment to accessible and affordable healthcare. Over 50 years ago, Dr. D. B. Mate began his medical journey after completing his degree and serving at Sassoon Hospital. At a time when most doctors chose urban careers, he made a bold and selfless decision to serve rural communities across Pune. With a vision to bridge the healthcare gap, he established a multispeciality hospital in a rural region, delivering honest, affordable, and quality medical care to underserved populations. His work transformed countless lives, bringing hope and healing to thousands of families in villages where healthcare access was once limited.',
+  'Carrying forward this powerful legacy, the next generation of the Mate family continued the mission with the same values and a stronger vision. Understanding the growing gap between urban healthcare advancements and rural accessibility, they introduced modern infrastructure, advanced medical technologies, diagnostic labs, and specialized treatments into rural healthcare systems. In 2015, this vision led to the establishment of a new super speciality hospital, which has now grown into a 100+ bed, high-technology healthcare center known for delivering affordable and accessible care without compromising on quality.',
+  'Today, LifeMate Healthcare has evolved into a trusted healthcare network, expanding its presence with LifeMate Clinic in Pune city while continuing to strengthen its rural roots. From a single modest center to multiple healthcare units, the journey reflects a strong foundation built on patient-first care, community trust, and consistent medical excellence. LifeMate stands today as a symbol of ethical healthcare, bridging rural and urban medical standards, and continuing its mission of saving lives with compassion, innovation, and unwavering dedication.',
 ];
 
 const roadmap = [
@@ -30,51 +30,113 @@ const roadmap = [
 ];
 
 const trustHighlights = [
-  { label: '50+ Years', value: 'Legacy of trusted care' },
-  { label: '100+ Beds', value: 'Expanded treatment capacity' },
-  { label: 'Pune Region', value: 'Rural to urban care delivery' },
-  { label: 'Founding Principle', value: 'Accessible and ethical healthcare for every community' },
-  { label: 'Growth Direction', value: 'Bridging rural trust with urban-quality infrastructure' },
+  {
+    label: '50+ Years',
+    value: 'Legacy of trusted and compassionate care',
+    iconPath: 'M12 8v5l3 2',
+    iconBg: 'bg-[#1D9BF0]',
+  },
+  {
+    label: '100+ Beds',
+    value: 'Expanded treatment and patient capacity',
+    iconPath: 'M7 9h10M7 12h10M7 15h6',
+    iconBg: 'bg-[#14C94A]',
+  },
+  {
+    label: 'Pune Region',
+    value: 'Rural-to-urban continuity of care delivery',
+    iconPath: 'M12 21s6-5.6 6-10a6 6 0 1 0-12 0c0 4.4 6 10 6 10Z M12 13a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z',
+    iconBg: 'bg-[#0E5A8A]',
+  },
+  {
+    label: 'Founding Principle',
+    value: 'Accessible and ethical healthcare for every community',
+    iconPath: 'M12 20s-7-3.6-7-9V6l7-3 7 3v5c0 5.4-7 9-7 9Z',
+    iconBg: 'bg-[#1D9BF0]',
+  },
+  {
+    label: 'Growth Direction',
+    value: 'Bridging rural trust with urban-grade infrastructure',
+    iconPath: 'M7 17V9m5 8V7m5 10v-4',
+    iconBg: 'bg-[#14C94A]',
+  },
+  {
+    label: 'High Technologies',
+    value: 'Advanced diagnostics, labs, and modern treatment systems',
+    iconPath: 'M9 3v6M15 3v6M5 10h14M7 21h10a2 2 0 0 0 2-2v-7H5v7a2 2 0 0 0 2 2Z',
+    iconBg: 'bg-[#0E5A8A]',
+  },
 ];
+
+const roadmapIcons = [
+  { iconPath: 'M12 21s6-5.6 6-10a6 6 0 1 0-12 0c0 4.4 6 10 6 10Z M12 13a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z', iconBg: 'bg-[#1D9BF0]' },
+  { iconPath: 'M12 20s-7-3.6-7-9V6l7-3 7 3v5c0 5.4-7 9-7 9Z', iconBg: 'bg-[#14C94A]' },
+  { iconPath: 'M7 17V9m5 8V7m5 10v-4', iconBg: 'bg-[#0E5A8A]' },
+  { iconPath: 'M8 12h8M12 8v8M5.5 12a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z', iconBg: 'bg-[#1D9BF0]' },
+];
+
+const HospitalStyledIcon = ({ iconPath, iconBg, variant = 'default' }) => (
+  <span
+    className={`inline-flex shrink-0 items-center justify-center text-white shadow-sm ${
+      variant === 'roadmap' ? `h-14 w-14 rounded-xl ${iconBg}` : `h-14 w-14 rounded-xl ${iconBg}`
+    }`}
+    aria-hidden
+  >
+    <svg
+      viewBox="0 0 24 24"
+      className={variant === 'roadmap' ? 'h-6 w-6' : 'h-6 w-6'}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={variant === 'roadmap' ? '2.4' : '2.2'}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {iconPath.split(' M').map((segment, index) => (
+        <path key={`${segment}-${index}`} d={index === 0 ? segment : `M${segment}`} />
+      ))}
+    </svg>
+  </span>
+);
 
 const FigmaActivitySection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7fbfd_100%)]"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#FFFFFF_0%,#F5FAFF_52%,#FFFFFF_100%)]"
       aria-label="About LifeMate Healthcare section"
     >
-      <div className="pointer-events-none absolute -left-20 top-24 h-64 w-64 rounded-full bg-[#1D9BF0]/8 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 top-10 h-72 w-72 rounded-full bg-[#14C94A]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 top-24 h-64 w-64 rounded-full bg-[#1D9BF0]/10 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-10 h-72 w-72 rounded-full bg-[#14C94A]/10 blur-3xl" />
 
       <div className="lm-container relative py-24">
         <div className="grid items-center gap-6 md:gap-8 lg:grid-cols-2">
           <div className="relative">
             <div className="lm-card border border-[#D9E6EE]">
-              <div className="relative h-[360px] overflow-hidden rounded-xl bg-[linear-gradient(145deg,#f3f9fd_0%,#e7f4fb_48%,#eef8f1_100%)] sm:h-[430px] lg:h-[500px]">
-                <div className="absolute left-[10%] top-[13%] h-[70%] w-[78%] rounded-[42%_58%_54%_46%/44%_38%_62%_56%] bg-[linear-gradient(135deg,#1D9BF0_0%,#0E5A8A_62%,#14C94A_100%)] shadow-[0_30px_60px_rgba(14,90,138,0.18)]" />
-                <div className="absolute left-[6%] top-[20%] h-14 w-14 rounded-full bg-white/45 blur-sm" />
-                <div className="absolute bottom-[18%] right-[10%] h-20 w-20 rounded-full bg-[#14C94A]/18 blur-md" />
-                <div className="absolute left-[6%] top-[74%] h-[2px] w-[72px] rotate-[-24deg] bg-[#0E5A8A]/75" />
-                <div className="absolute left-[5%] top-[81%] h-[2px] w-[92px] rotate-[-24deg] bg-[#0E5A8A]/75" />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[linear-gradient(160deg,#F7FBFD_0%,#EAF4FB_100%)]">
+                <div className="absolute left-[10%] top-[10%] h-[82%] w-[80%] rounded-[36%_64%_52%_48%/42%_36%_64%_58%] bg-[linear-gradient(145deg,#1D9BF0_0%,#0E5A8A_70%,#0E5A8A_100%)] shadow-[0_22px_40px_rgba(14,90,138,0.22)]" />
+                <div className="absolute left-[9%] top-[13%] h-12 w-12 rounded-full bg-white/35 blur-sm" />
+                <div className="absolute bottom-[16%] right-[10%] h-14 w-14 rounded-full bg-[#14C94A]/15 blur-md" />
 
-                <img
-                  src={activityDoctor}
-                  alt="Healthcare professional representing LifeMate Healthcare"
-                  className="absolute bottom-0 left-[46%] h-[94%] w-auto -translate-x-1/2 object-contain drop-shadow-[0_22px_42px_rgba(15,23,42,0.16)]"
-                  loading="lazy"
-                />
+                <div className="absolute inset-5 overflow-hidden rounded-xl border border-white/65 bg-white/35 backdrop-blur-[1px]">
+                  <img
+                    src={activityDoctor}
+                    alt="Healthcare professional representing LifeMate Healthcare"
+                    className="h-full w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
               {trustHighlights.map((item) => (
                 <div
                   key={item.label}
-                  className="lm-card border border-[#D9E6EE] p-5 md:p-6"
+                  className="lm-card flex h-full flex-col space-y-3 border border-[#D9E6EE] p-5 md:p-6"
                 >
+                  <HospitalStyledIcon iconPath={item.iconPath} iconBg={item.iconBg} />
                   <p className="text-[11px] font-bold uppercase tracking-[1.2px] text-[#1D9BF0]">{item.label}</p>
-                  <p className="mt-2 text-base font-semibold leading-relaxed text-[#0F172A]">{item.value}</p>
+                  <p className="mt-2 min-h-[56px] text-base font-semibold leading-relaxed text-[#0F172A]">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -90,7 +152,7 @@ const FigmaActivitySection = () => {
 
             <div className="mt-6 max-w-xl space-y-4">
               {storyParagraphs.map((paragraph) => (
-                <p key={paragraph} className="text-gray-500 leading-relaxed">
+                <p key={paragraph} className="text-justify text-gray-500 leading-relaxed">
                   {paragraph}
                 </p>
               ))}
@@ -98,7 +160,7 @@ const FigmaActivitySection = () => {
           </div>
         </div>
 
-        <div className="mt-16 rounded-xl border border-[#D9E6EE] bg-white p-6 shadow-sm md:p-8">
+        <div className="mt-16">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-[520px]">
               <p className="text-[12px] font-bold uppercase tracking-[1.4px] text-[#1D9BF0]">Growth Roadmap</p>
@@ -115,7 +177,7 @@ const FigmaActivitySection = () => {
             </a>
           </div>
 
-          <div className="relative mt-10 hidden h-[3px] w-full bg-[linear-gradient(90deg,#1D9BF0_0%,#A5D8F3_34%,#14C94A_100%)] lg:block" />
+          <div className="relative mt-10 hidden h-[2px] w-full bg-[linear-gradient(90deg,rgba(29,155,240,0.22)_0%,rgba(29,155,240,0.16)_50%,rgba(20,201,74,0.2)_100%)] lg:block" />
 
           <div className="mt-8 grid gap-10 lg:grid-cols-4">
             {roadmap.map((item, index) => (
@@ -130,12 +192,14 @@ const FigmaActivitySection = () => {
                     <p className="text-[11px] font-bold uppercase tracking-[1.3px] text-[#1D9BF0]">{item.year}</p>
                     <h4 className="mt-2 text-lg font-semibold leading-tight text-[#0F172A] md:text-xl">{item.title}</h4>
                   </div>
-                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#EAF4FB] text-[12px] font-bold text-[#0E5A8A]">
-                    0{index + 1}
-                  </span>
+                  <HospitalStyledIcon
+                    iconPath={roadmapIcons[index].iconPath}
+                    iconBg={roadmapIcons[index].iconBg}
+                    variant="roadmap"
+                  />
                 </div>
 
-                <div className="mt-5 h-[3px] w-[58px] rounded-full bg-[linear-gradient(90deg,#1D9BF0_0%,#14C94A_100%)]" />
+                <div className="mt-5 h-[3px] w-[58px] rounded-full bg-[linear-gradient(90deg,#1D9BF0_0%,#14C94A_100%)] opacity-75" />
                 <p className="mt-5 text-sm text-gray-500 leading-relaxed">{item.detail}</p>
               </article>
             ))}

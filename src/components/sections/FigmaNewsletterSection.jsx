@@ -13,20 +13,38 @@ const contactPoints = [
   {
     label: 'Response Window',
     value: 'Within 1-2 business days',
+    iconPath: 'M8 3v3M16 3v3M4 9h16M6 21h12a2 2 0 0 0 2-2V9H4v10a2 2 0 0 0 2 2Z',
+    iconBg: 'bg-[#1D9BF0]',
   },
   {
     label: 'Clinic Mobile',
     value: '+91 84596 12363',
+    iconPath: 'M8.5 4h7a1.5 1.5 0 0 1 1.5 1.5v13A1.5 1.5 0 0 1 15.5 20h-7A1.5 1.5 0 0 1 7 18.5v-13A1.5 1.5 0 0 1 8.5 4Z M11 17h2',
+    iconBg: 'bg-[#14C94A]',
   },
   {
     label: 'Clinic Landline',
     value: '+91 20 2997 2423',
+    iconPath: 'M4 5h16v12H4z M9 18h6',
+    iconBg: 'bg-[#0E5A8A]',
   },
   {
     label: 'Email',
     value: 'lifematehealthcare@gmail.com',
+    iconPath: 'M4 7h16v10H4z M4 8l8 6 8-6',
+    iconBg: 'bg-[#1D9BF0]',
   },
 ];
+
+const ContactPointIcon = ({ iconPath, iconBg }) => (
+  <span className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-white shadow-sm ${iconBg}`} aria-hidden>
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+      {iconPath.split(' M').map((segment, index) => (
+        <path key={`${segment}-${index}`} d={index === 0 ? segment : `M${segment}`} />
+      ))}
+    </svg>
+  </span>
+);
 
 const FigmaNewsletterSection = () => {
   const [formData, setFormData] = useState(initialState);
@@ -71,21 +89,23 @@ const FigmaNewsletterSection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#f7fbfd_0%,#ffffff_100%)]"
+      className="relative overflow-hidden bg-[linear-gradient(90deg,#F7FBFD_0%,#F7FBFD_52%,#FFFFFF_52%,#FFFFFF_100%)]"
       aria-label="Contact LifeMate Healthcare section"
     >
       <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1D9BF0]/8 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-8 h-72 w-72 rounded-full bg-[#14C94A]/8 blur-3xl" />
 
       <div className="lm-container py-20 md:py-24">
-        <div className="rounded-xl border border-[#D9E6EE] bg-white/95 p-6 shadow-sm backdrop-blur md:p-8">
+        <div>
           <div className="grid items-stretch gap-6 md:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="rounded-xl bg-[linear-gradient(160deg,#0E5A8A_0%,#11496E_52%,#16384A_100%)] p-6 text-white shadow-sm md:p-8">
-              <p className="text-[12px] font-bold uppercase tracking-[1.5px] text-[#A5D8F3]">Contact Us</p>
-              <h2 className="mt-4 text-2xl font-semibold text-white md:text-3xl">
+            <div className="relative overflow-hidden rounded-2xl border border-[#D9E6EE] bg-[linear-gradient(180deg,#FFFFFF_0%,#F3F9FF_100%)] p-6 shadow-sm md:p-8">
+              <div className="pointer-events-none absolute right-[-48px] top-[-48px] h-40 w-40 rounded-full bg-[#1D9BF0]/8 blur-2xl" />
+              <div className="pointer-events-none absolute bottom-[-36px] left-[-42px] h-32 w-32 rounded-full bg-[#14C94A]/10 blur-2xl" />
+              <p className="text-[12px] font-bold uppercase tracking-[1.5px] text-[#1D9BF0]">Contact Us</p>
+              <h2 className="mt-4 text-2xl font-semibold text-[#0F172A] md:text-3xl">
                 Enquiry Form
               </h2>
-              <p className="mt-4 max-w-[420px] text-white/82 leading-relaxed">
+              <p className="mt-4 max-w-[420px] text-[#5B6B80] leading-relaxed">
                 Share your enquiry with LifeMate Healthcare and our team will respond with clarity, speed, and the right next step.
               </p>
 
@@ -93,16 +113,21 @@ const FigmaNewsletterSection = () => {
                 {contactPoints.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-2xl border border-white/14 bg-white/8 px-4 py-4 backdrop-blur-sm"
+                    className="rounded-2xl border border-[#D9E6EE] bg-white px-4 py-4"
                   >
-                    <p className="text-[11px] font-bold uppercase tracking-[1.3px] text-[#A5D8F3]">{item.label}</p>
-                    <p className="mt-2 text-base font-semibold leading-relaxed text-white">{item.value}</p>
+                    <div className="flex items-center gap-3">
+                      <ContactPointIcon iconPath={item.iconPath} iconBg={item.iconBg} />
+                      <div>
+                        <p className="text-[11px] font-bold uppercase tracking-[1.3px] text-[#1D9BF0]">{item.label}</p>
+                        <p className="mt-1 text-base font-semibold leading-relaxed text-[#0F172A]">{item.value}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-xl border border-[#D9E6EE] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] p-6 shadow-sm md:p-8">
+            <div className="rounded-2xl bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.06)] md:p-8">
               <div className="mb-6">
                 <p className="text-[13px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0]">Share Your Details</p>
                 <h3 className="mt-2 text-2xl font-semibold text-[#0F172A] md:text-3xl">We will connect you with the right team</h3>
@@ -125,7 +150,7 @@ const FigmaNewsletterSection = () => {
                       onChange={onChange}
                       required
                       placeholder="Enter your full name"
-                      className="h-[60px] w-full rounded-2xl border border-[#D9E6EE] bg-white px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#1D9BF0] focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
+                      className="h-[60px] w-full rounded-2xl border border-transparent bg-[#F7FAFE] px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#BFDAEE] focus:bg-white focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
                     />
                   </div>
                   <div>
@@ -140,7 +165,7 @@ const FigmaNewsletterSection = () => {
                       onChange={onChange}
                       required
                       placeholder="Enter your phone number"
-                      className="h-[60px] w-full rounded-2xl border border-[#D9E6EE] bg-white px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#1D9BF0] focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
+                      className="h-[60px] w-full rounded-2xl border border-transparent bg-[#F7FAFE] px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#BFDAEE] focus:bg-white focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
                     />
                   </div>
                 </div>
@@ -158,7 +183,7 @@ const FigmaNewsletterSection = () => {
                       onChange={onChange}
                       required
                       placeholder="Enter your email"
-                      className="h-[60px] w-full rounded-2xl border border-[#D9E6EE] bg-white px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#1D9BF0] focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
+                      className="h-[60px] w-full rounded-2xl border border-transparent bg-[#F7FAFE] px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#BFDAEE] focus:bg-white focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
                     />
                   </div>
                   <div>
@@ -171,7 +196,7 @@ const FigmaNewsletterSection = () => {
                       value={formData.enquiryType}
                       onChange={onChange}
                       required
-                      className="h-[60px] w-full rounded-2xl border border-[#D9E6EE] bg-white px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#1D9BF0] focus:ring-4 focus:ring-[#1D9BF0]/10"
+                      className="h-[60px] w-full rounded-2xl border border-transparent bg-[#F7FAFE] px-5 text-[15px] text-[#0F172A] outline-none transition focus:border-[#BFDAEE] focus:bg-white focus:ring-4 focus:ring-[#1D9BF0]/10"
                     >
                       <option value="" disabled>
                         Select enquiry type
@@ -196,7 +221,7 @@ const FigmaNewsletterSection = () => {
                     onChange={onChange}
                     required
                     placeholder="Tell us about your enquiry"
-                    className="w-full rounded-2xl border border-[#D9E6EE] bg-white px-5 py-4 text-[15px] leading-7 text-[#0F172A] outline-none transition focus:border-[#1D9BF0] focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
+                    className="w-full rounded-2xl border border-transparent bg-[#F7FAFE] px-5 py-4 text-[15px] leading-7 text-[#0F172A] outline-none transition focus:border-[#BFDAEE] focus:bg-white focus:ring-4 focus:ring-[#1D9BF0]/10 placeholder:text-[#94A3B8]"
                   />
                 </div>
 
