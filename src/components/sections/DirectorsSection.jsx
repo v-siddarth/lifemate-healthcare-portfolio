@@ -41,23 +41,23 @@ const DirectorsSection = () => {
       <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-[#1D9BF0]/10 blur-3xl" />
       <div className="pointer-events-none absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-[#14C94A]/10 blur-3xl" />
 
-      <div className="relative mx-auto w-[min(1120px,95vw)] pb-[52px] pt-[44px] lg:pb-[70px] lg:pt-[62px]">
+      <div className="lm-container py-20 md:py-24">
         <div className="max-w-[760px]">
           <p className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0]">Leadership Team</p>
-          <h2 className="mt-2 text-[38px] font-bold leading-[1.12] tracking-[0.2px] text-[#0F172A] lg:text-[50px] lg:leading-[58px]">
+          <h2 className="mt-2 text-2xl font-semibold text-[#0F172A] md:text-3xl">
             Leadership Guiding LifeMate Healthcare Forward
           </h2>
-          <p className="mt-4 text-[16px] leading-8 text-[#475569]">
+          <p className="mt-4 text-gray-500 leading-relaxed">
             LifeMate Healthcare Pvt Ltd is led by a multi-doctor leadership team rooted in service, clinical trust,
             operational discipline, and a long-term commitment to ethical healthcare growth across every unit.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
           {doctors.map((doctor, index) => (
             <article
               key={doctor.name}
-              className="group relative overflow-hidden rounded-[30px] border border-[#D9E6EE] bg-white p-7 shadow-[0_12px_30px_rgba(14,90,138,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#1D9BF0]/30 hover:shadow-[0_24px_46px_rgba(14,90,138,0.14)]"
+              className="lm-card group relative overflow-hidden border border-[#D9E6EE] hover:shadow-lg"
             >
               <div className="absolute inset-x-0 top-0 h-1.5 bg-[linear-gradient(90deg,#1D9BF0_0%,#0E5A8A_55%,#14C94A_100%)]" />
               <div className="pointer-events-none absolute right-[-18px] top-[-18px] h-28 w-28 rounded-full bg-[#EAF4FB] opacity-70 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
@@ -72,11 +72,11 @@ const DirectorsSection = () => {
                   </span>
                 </div>
 
-                <h3 className="mt-6 text-[30px] font-extrabold leading-[1.14] text-[#0F172A]">{doctor.name}</h3>
+                <h3 className="mt-6 text-lg font-semibold leading-tight text-[#0F172A] md:text-xl">{doctor.name}</h3>
                 <p className="mt-3 text-[12px] font-bold uppercase tracking-[1.4px] text-[#1D9BF0]">{doctor.designation}</p>
                 <div className="mt-5 h-[3px] w-[64px] rounded-full bg-[linear-gradient(90deg,#1D9BF0_0%,#14C94A_100%)]" />
 
-                <p className="mt-5 text-[15px] leading-7 text-[#475569]">{doctor.summary}</p>
+                <p className="mt-5 text-sm text-gray-500 leading-relaxed">{doctor.summary}</p>
               </div>
             </article>
           ))}

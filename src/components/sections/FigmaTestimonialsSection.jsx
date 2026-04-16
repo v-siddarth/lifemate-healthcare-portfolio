@@ -36,23 +36,23 @@ const FigmaTestimonialsSection = () => {
       <div className="pointer-events-none absolute -left-20 top-8 h-56 w-56 rounded-full bg-[#1D9BF0]/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-56 w-56 rounded-full bg-[#14C94A]/10 blur-3xl" />
 
-      <div className="relative mx-auto w-[min(1120px,95vw)] pb-[78px] pt-[74px] lg:pb-[94px] lg:pt-[90px]">
+      <div className="lm-container py-20 md:py-24">
         <div className="max-w-[760px]">
           <p className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0]">Testimonials</p>
-          <h2 className="mt-2 text-[40px] font-bold leading-[50px] tracking-[0.2px] text-[#0F172A] lg:text-[46px] lg:leading-[58px]">
+          <h2 className="mt-2 text-2xl font-semibold text-[#0F172A] md:text-3xl">
             Trusted by Patients, Families, and Communities
           </h2>
-          <p className="mt-4 text-[16px] leading-8 text-[#475569]">
+          <p className="mt-4 text-gray-500 leading-relaxed">
             LifeMate Healthcare Pvt Ltd continues to grow through patient trust, transparent communication, and
             dependable clinical standards across every care unit.
           </p>
         </div>
 
-        <div className="mt-10 space-y-4">
+        <div className="mt-10 space-y-6">
           {testimonials.map((item, idx) => (
             <article
               key={`${item.name}-${idx}`}
-              className="group grid gap-5 rounded-2xl border border-[#D9E6EE] bg-white px-6 py-5 transition-all duration-300 hover:border-[#1D9BF0]/30 hover:bg-[#F9FCFF] md:grid-cols-[210px_1fr] md:items-center md:px-7"
+              className="lm-card group grid border border-[#D9E6EE] md:grid-cols-[220px_1fr] md:items-center"
             >
               <div className="flex items-center gap-3">
                 <img
@@ -62,20 +62,20 @@ const FigmaTestimonialsSection = () => {
                   loading="lazy"
                 />
                 <div>
-                  <p className="text-[16px] font-bold leading-6 tracking-[0.2px] text-[#0F172A]">{item.name}</p>
+                  <p className="text-lg font-semibold text-[#0F172A]">{item.name}</p>
                   <p className="text-[12px] font-semibold uppercase tracking-[1px] text-[#1D9BF0]">{item.role}</p>
                 </div>
               </div>
 
               <div className="border-l-4 border-[#1D9BF0] pl-4">
-                <div className="mb-2 flex gap-[4px] text-[18px] leading-none">
+                <div className="mb-3 flex gap-[4px] text-[22px] leading-none">
                   <span className="text-[#F59E0B]">★</span>
                   <span className="text-[#F59E0B]">★</span>
                   <span className="text-[#F59E0B]">★</span>
                   <span className="text-[#F59E0B]">★</span>
                   <span className="text-[#F59E0B]">★</span>
                 </div>
-                <p className="text-[16px] leading-8 text-[#475569]">"{item.quote}"</p>
+                <p className="text-gray-500 leading-relaxed">"{item.quote}"</p>
               </div>
             </article>
           ))}

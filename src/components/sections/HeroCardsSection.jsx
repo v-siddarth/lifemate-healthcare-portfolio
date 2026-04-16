@@ -31,26 +31,26 @@ const cards = [
 const HeroCardsSection = () => {
   return (
     <section id="hospitals" className="relative z-30 bg-[#F7FBFD]" aria-label="Healthcare service highlights">
-      <div className="mx-auto mt-4 w-[min(1120px,95vw)] pb-[74px] sm:mt-8 lg:-mt-24">
-        <div className="grid gap-[24px] md:grid-cols-2 lg:grid-cols-3">
+      <div className="lm-container -mt-16 pb-20 md:-mt-20 md:pb-24">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {cards.map((card) => (
             <a
               key={card.title}
               href={card.href}
               aria-label={`Open details for ${card.title}`}
-              className="block w-full rounded-[6px] bg-white px-10 py-[35px] shadow-[0px_13px_19px_0px_rgba(0,0,0,0.07)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0px_20px_32px_0px_rgba(14,90,138,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9BF0]/40"
+              className="lm-card lm-card-hover flex h-full flex-col border border-[#D9E6EE] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1D9BF0]/40"
             >
               <div
-                className="flex h-[76px] w-[72px] items-center justify-center rounded-[10px] text-[32px] text-white"
+                className="flex h-[76px] w-[72px] items-center justify-center rounded-xl text-[32px] text-white"
                 style={{ backgroundColor: card.iconBg }}
                 aria-hidden
               >
                 {card.icon}
               </div>
-              <p className="mt-5 text-[12px] font-semibold uppercase tracking-[1.2px] text-[#0E5A8A]">{card.location}</p>
-              <h3 className="mt-1 text-[18px] font-bold leading-7 tracking-[0.1px] text-[#0F172A]">{card.title}</h3>
-              <div className="mt-5 h-[2px] w-[50px] bg-[#DC2626]" />
-              <p className="mt-5 text-[14px] font-normal leading-6 tracking-[0.2px] text-[#475569]">{card.description}</p>
+              <p className="mb-2 mt-6 text-[12px] font-semibold uppercase tracking-[1.2px] text-[#0E5A8A]">{card.location}</p>
+              <h3 className="lm-h3 mb-2 text-[#0F172A]">{card.title}</h3>
+              <div className="mb-5 h-[2px] w-[50px] bg-[#DC2626]" />
+              <p className="mt-auto text-sm leading-relaxed text-gray-500">{card.description}</p>
             </a>
           ))}
         </div>

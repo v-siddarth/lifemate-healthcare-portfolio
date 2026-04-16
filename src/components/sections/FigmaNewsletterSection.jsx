@@ -77,15 +77,15 @@ const FigmaNewsletterSection = () => {
       <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#1D9BF0]/8 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-8 h-72 w-72 rounded-full bg-[#14C94A]/8 blur-3xl" />
 
-      <div className="relative mx-auto w-[min(1120px,95vw)] pb-[64px] pt-[58px] lg:pb-[84px] lg:pt-[76px]">
-        <div className="rounded-[34px] border border-[#D9E6EE] bg-white/95 p-5 shadow-[0_22px_52px_rgba(14,90,138,0.08)] backdrop-blur sm:p-7 lg:p-8">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
-            <div className="rounded-[28px] bg-[linear-gradient(160deg,#0E5A8A_0%,#11496E_52%,#16384A_100%)] p-6 text-white shadow-[0_24px_48px_rgba(14,90,138,0.18)] lg:p-8">
+      <div className="lm-container py-20 md:py-24">
+        <div className="rounded-xl border border-[#D9E6EE] bg-white/95 p-6 shadow-sm backdrop-blur md:p-8">
+          <div className="grid items-stretch gap-6 md:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="rounded-xl bg-[linear-gradient(160deg,#0E5A8A_0%,#11496E_52%,#16384A_100%)] p-6 text-white shadow-sm md:p-8">
               <p className="text-[12px] font-bold uppercase tracking-[1.5px] text-[#A5D8F3]">Contact Us</p>
-              <h2 className="mt-4 text-[34px] font-bold leading-[1.08] tracking-[0.2px] text-white lg:text-[44px]">
+              <h2 className="mt-4 text-2xl font-semibold text-white md:text-3xl">
                 Enquiry Form
               </h2>
-              <p className="mt-4 max-w-[420px] text-[16px] leading-8 text-white/82">
+              <p className="mt-4 max-w-[420px] text-white/82 leading-relaxed">
                 Share your enquiry with LifeMate Healthcare and our team will respond with clarity, speed, and the right next step.
               </p>
 
@@ -96,23 +96,23 @@ const FigmaNewsletterSection = () => {
                     className="rounded-2xl border border-white/14 bg-white/8 px-4 py-4 backdrop-blur-sm"
                   >
                     <p className="text-[11px] font-bold uppercase tracking-[1.3px] text-[#A5D8F3]">{item.label}</p>
-                    <p className="mt-2 text-[16px] font-semibold leading-7 text-white">{item.value}</p>
+                    <p className="mt-2 text-base font-semibold leading-relaxed text-white">{item.value}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-[#D9E6EE] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.95)] sm:p-6 lg:p-7">
+            <div className="rounded-xl border border-[#D9E6EE] bg-[linear-gradient(180deg,#ffffff_0%,#fbfdff_100%)] p-6 shadow-sm md:p-8">
               <div className="mb-6">
                 <p className="text-[13px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0]">Share Your Details</p>
-                <h3 className="mt-2 text-[30px] font-bold leading-[1.14] text-[#0F172A]">We will connect you with the right team</h3>
-                <p className="mt-3 max-w-[520px] text-[15px] leading-7 text-[#64748B]">
+                <h3 className="mt-2 text-2xl font-semibold text-[#0F172A] md:text-3xl">We will connect you with the right team</h3>
+                <p className="mt-3 max-w-[520px] text-gray-500 leading-relaxed">
                   Whether your enquiry is about hospitals, partnerships, medical services, or growth opportunities, this form routes your message to the appropriate LifeMate Healthcare team.
                 </p>
               </div>
 
-              <form className="space-y-5" onSubmit={onSubmit}>
-                <div className="grid gap-4 sm:grid-cols-2">
+              <form className="space-y-6" onSubmit={onSubmit}>
+                <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
                   <div>
                     <label htmlFor="enquiry-name" className="mb-2 block text-[12px] font-bold uppercase tracking-[1.1px] text-[#0E5A8A]">
                       Full Name
@@ -145,7 +145,7 @@ const FigmaNewsletterSection = () => {
                   </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2 md:gap-6">
                   <div>
                     <label htmlFor="enquiry-email" className="mb-2 block text-[12px] font-bold uppercase tracking-[1.1px] text-[#0E5A8A]">
                       Email Address
@@ -212,14 +212,14 @@ const FigmaNewsletterSection = () => {
                   </p>
                 ) : null}
 
-                <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-6 flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
                   <p className="text-[13px] leading-6 text-[#64748B]">
                     Your details are handled with care and used only to respond to your enquiry.
                   </p>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex h-[56px] min-w-[220px] items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#1D9BF0_0%,#0E5A8A_100%)] px-7 text-[14px] font-bold uppercase tracking-[0.6px] text-white shadow-[0_16px_28px_rgba(29,155,240,0.22)] transition-transform duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+                    className="inline-flex h-[56px] min-w-[220px] items-center justify-center rounded-xl bg-[linear-gradient(135deg,#1D9BF0_0%,#0E5A8A_100%)] px-7 text-[14px] font-bold uppercase tracking-[0.6px] text-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {isSubmitting ? 'Submitting Enquiry...' : 'Send Enquiry'}
                   </button>

@@ -38,3 +38,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .lm-section {
+    @apply py-20 md:py-24;
+  }
+
+  .lm-container {
+    @apply mx-auto max-w-7xl px-4 md:px-6;
+  }
+
+  .lm-card {
+    @apply rounded-xl bg-white p-6 shadow-sm transition-all duration-300 ease-in-out md:p-8;
+  }
+
+  .lm-card-hover {
+    @apply hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .lm-h2 {
+    @apply text-2xl font-semibold text-slate-900 md:text-3xl;
+  }
+
+  .lm-h3 {
+    @apply text-lg font-semibold text-slate-900 md:text-xl;
+  }
+
+  .lm-body {
+    @apply text-gray-500 leading-relaxed;
+  }
+}

@@ -10,10 +10,10 @@ const featureLinks = [
 
 const FigmaFooterSection = () => {
   return (
-    <footer className="bg-[#F7FBFD]" aria-label="Footer">
+    <footer className="border-t border-gray-200 bg-[#F7FBFD]" aria-label="Footer">
       <div className="bg-white">
-        <div className="mx-auto w-[min(1120px,95vw)] py-[50px]">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-4 lg:grid-cols-[1.4fr_0.86fr_0.9fr] lg:gap-2">
+        <div className="lm-container py-16">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8 lg:grid-cols-[1.4fr_0.86fr_0.9fr]">
             <div>
               <a href="#home" className="inline-flex items-center gap-3" aria-label="LifeMate Healthcare home">
                 <img src={logo} alt="LifeMate Healthcare logo" className="h-10 w-auto object-contain" />
@@ -27,7 +27,7 @@ const FigmaFooterSection = () => {
                   </span>
                 </span>
               </a>
-              <p className="mt-5 max-w-[470px] text-[14px] font-medium leading-7 tracking-[0.2px] text-[#475569]">
+              <p className="mt-5 max-w-[470px] text-sm leading-relaxed text-gray-500">
                 Trusted healthcare network focused on patient-first care, hospital excellence, and future-ready health
                 innovation.
               </p>
@@ -35,12 +35,12 @@ const FigmaFooterSection = () => {
 
             <div>
               <h3 className="text-[16px] font-bold leading-6 tracking-[0.1px] text-[#0F172A]">Features</h3>
-              <ul className="mt-5 space-y-[6px]">
+              <ul className="mt-5 space-y-3">
                 {featureLinks.map((item) => (
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569] transition-colors hover:text-[#1D9BF0]"
+                      className="text-sm font-semibold text-gray-500 transition-colors hover:text-[#1D9BF0]"
                     >
                       {item.label}
                     </a>
@@ -51,17 +51,17 @@ const FigmaFooterSection = () => {
 
             <div>
               <h3 className="text-[16px] font-bold leading-6 tracking-[0.1px] text-[#0F172A]">Get In Touch</h3>
-              <ul className="mt-5 space-y-[10px]">
-                <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+              <ul className="mt-5 space-y-3">
+                <li className="text-sm font-semibold text-gray-500">
                   <span className="text-[#0E5A8A]">Clinic Mobile:</span> +91 84596 12363
                 </li>
-                <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+                <li className="text-sm font-semibold text-gray-500">
                   <span className="text-[#0E5A8A]">Clinic Landline:</span> +91 20 2997 2423
                 </li>
-                <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+                <li className="text-sm font-semibold text-gray-500">
                   <span className="text-[#0E5A8A]">Email:</span> lifematehealthcare@gmail.com
                 </li>
-                <li className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+                <li className="text-sm font-semibold text-gray-500">
                   <span className="text-[#0E5A8A]">Address:</span> Near ST Bus Stand, Narayangaon, Pune, Maharashtra
                   410504
                 </li>
@@ -72,17 +72,17 @@ const FigmaFooterSection = () => {
       </div>
 
       <div className="border-t border-[#D9E6EE] bg-[#F7FBFD]">
-        <div className="mx-auto w-[min(1120px,95vw)] py-[20px] text-center">
-          <p className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+        <div className="lm-container py-6 text-center">
+          <p className="text-sm font-semibold text-gray-500">
             © 2026 LifeMate Healthcare Pvt Ltd. All rights reserved.
           </p>
-          <p className="mt-1 text-[14px] font-bold leading-6 tracking-[0.2px] text-[#475569]">
+          <p className="mt-2 text-sm font-semibold text-gray-400">
             Developed and maintained by{' '}
             <a
               href="https://20sdevelopers.com/"
               target="_blank"
               rel="noreferrer"
-              className="text-[14px] font-bold leading-6 tracking-[0.2px] text-[#1D9BF0] transition-colors hover:text-[#0E5A8A]"
+              className="font-semibold text-[#1D9BF0] transition-colors hover:text-[#0E5A8A]"
             >
               20s Developers
             </a>
